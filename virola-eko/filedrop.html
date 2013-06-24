@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>File drop</title>
+
+<style type="text/css">
+body { margin:0; padding:0; }
+#DropArea { height: 400px; width: 600px; margin: 50px auto; border:3px dashed #ddd; text-align: center;}
+#DropArea span { text-align: center;}
+</style>
+</head>
+<body>
+<div id="DropArea">
+    <span>File here...</span>
+</div>
+<p>现在不能做因为chrome v21稳定版还没出，其中用到的webkitGetAsEntry()方法在v21中才能实现。</p>
+
+<script type="text/javascript">
+
+function traverseFileTree(item, path) {
+  path = path || "";
+  if (item.isFile) {
+    // Get file
+    item.file(function(file) {
+      console.log("File:", path + file.name);
+    });
+  } else if (item.isDirectory) {
+    // Get folder contents
+    var dirReader = item.createReader();
+    dirReader.readEntries(function(entries) {
+      for (var i=0; i<entries.length; i++) {
+        traverseFileTree(entries[i], path + item.name + "/");
+      }
+    });
+  }
+}
+
+var dropArea = document.getElementById('DropArea');
+dropArea.addEventListener("drop", function(event) {
+  event.preventDefault();
+  
+  var items = event.dataTransfer.items;
+  for (var i=0; i<items.length; i++) {
+    // webkitGetAsEntry is where the magic happens
+    var item = items[i].webkitGetAsEntry(); // in chrome v21
+    if (item) {
+      traverseFileTree(item);
+    }
+  }
+}, false);
+</script>
+
+</body>
+</html>

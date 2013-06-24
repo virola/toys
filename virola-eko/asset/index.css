@@ -1,0 +1,146 @@
+/** 
+ * index.css
+ */
+
+/** Frame Related **/
+body {
+    background-color: #7ABECC;
+    color: #FFFFFF;
+    text-align: center;
+    text-shadow: 2px 2px 0 #64B1C6;
+}
+
+nav ul {
+    font-size: 24px;
+    padding: 20px;
+}
+
+nav li {
+    display: inline;
+    font-weight: normal;
+}
+
+a {
+    -webkit-transition: color 0.5s linear 0s;
+    -moz-transition: color 0.5s linear 0s;
+    -ms-transition: color 0.5s linear 0s;
+    -o-transition: color 0.5s linear 0s;
+    transition: color 0.5s linear 0s;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #D2EDF7;
+}
+
+.break {
+    color: #D2EDF7;
+    padding: 0 10px;
+}
+
+/** Font Related **/
+@font-face {
+    font-family: KristonITC;
+    src: url("font/kriston.ttf");
+}
+@font-face {
+    font-family: QuillineScriptThin;
+    src: url("font/quilline.TTF");
+}
+.f20 {
+    font-size:20px;
+}
+.f30 {
+    font-size: 30px;
+}
+
+.f46 {
+    font-size: 46px;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+.f60 {
+    font-size: 60px;
+    padding-top: 120px;
+    text-transform: uppercase;
+}
+
+.f72 {
+    font-size: 72px;
+    text-transform: uppercase;
+}
+
+.f130 {
+    color: #D2EDF7;
+    font-size: 130px;
+    line-height: 0.9em;
+    text-transform: uppercase;
+}
+
+.qs {
+    font-family:'QuillineScriptThin',Arial,Helvetica,sans-serif;
+}
+.kr {
+    font-family:'KristonITC',Arial,Helvetica,sans-serif;
+}
+.cf {
+    font-family: 'ChunkFiveRegular',Arial,Helvetica,sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.krl {
+    font-family: 'KristonITC',Arial,Helvetica,sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/** Heart Style **/
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    margin-top: 100px;
+}
+
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    -moz-border-radius:50px 50px 0 0;
+    border-radius:50px 50px 0 0;
+    -webkit-transform:rotate( -45deg );
+    -moz-transform:rotate( -45deg );
+    -ms-transform:rotate( -45deg );
+    -o-transform:rotate( -45deg );
+    transform:rotate( -45deg );
+
+    -webkit-transform-origin:0 100%;
+    -moz-transform-origin:0 100%;
+    -ms-transform-origin:0 100%;
+    -o-transform-origin:0 100%;
+    transform-origin:0 100%;
+}
+
+.heart:after {
+    left: 0;
+    -webkit-transform:rotate( 45deg );
+    -moz-transform:rotate( 45deg );
+    -ms-transform:rotate( 45deg );
+    -o-transform:rotate( 45deg );
+    transform:rotate( 45deg );
+
+    -webkit-transform-origin:100% 100%;
+    -moz-transform-origin:100% 100%;
+    -ms-transform-origin:100% 100%;
+    -o-transform-origin:100% 100%;
+    transform-origin:100% 100%;
+};
