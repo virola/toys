@@ -19,6 +19,6 @@ ga('send', 'pageview');
         ? (document.documentMode || + RegExp['\x241']) : undefined;
 
     if ( ieVersion < 9 ) {
-        document.write('<script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>');
+        document.write('<script src="dep/lets-kill-ie.js"></script>');
     }
 } )();
