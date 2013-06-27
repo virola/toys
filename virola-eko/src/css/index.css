@@ -42,11 +42,11 @@ a:hover {
 /** Font Related **/
 @font-face {
     font-family: KristonITC;
-    src: url("font/kriston.ttf");
+    src: url("../../asset/font/kriston.ttf");
 }
 @font-face {
     font-family: QuillineScriptThin;
-    src: url("font/quilline.TTF");
+    src: url("../../asset/font/quilline.TTF");
 }
 .f20 {
     font-size:20px;
