@@ -11,3 +11,14 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-42080725-1', 'virola-eko.com');
 ga('send', 'pageview');
+
+
+// let's kill IE!
+( function() {
+    var ieVersion = /msie (\d+\.\d+)/i.test(navigator.userAgent) 
+        ? (document.documentMode || + RegExp['\x241']) : undefined;
+
+    if ( ieVersion < 9 ) {
+        document.write('<script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>');
+    }
+} )();
