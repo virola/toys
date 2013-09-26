@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>quicksort快排测试</title>
+<link rel="stylesheet" href="asset/code.css" />
+<link rel="stylesheet" href="asset/snippet/jquery.snippet.min.css">
+
+<script src="asset/jquery/jquery.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+<script src="asset/snippet/jquery.snippet.min.js"></script>
+</head>
+<body>
+<section class="example">
+    <h1>快速排序算法测试</h1>
+
+    <article>
+    <p class="title">随机生成<input id="size" class="small" type="number" size="4" value="10" >个0-10000的数字:
+        <button id="gen-button">generate</button></p>
+    <p><textarea id="rand-nums" class="result"></textarea></p>
+
+    <div class="conclude">
+        <p><button id="begin">开始快速排序</button></p>
+        <p>运行结果：</p>
+        <section id="process"></section>
+        <section id="final" class="result"></section>
+    </div>
+
+    </article>
+
+</section>
+
+<section class="source">
+    <h1>源码</h1>
+    <div class="code">
+<pre class="js">
+function quickSort(arr, start, end) {
+    if (arr == null || arr.length == 0) {
+        return null;
+    }
+
+    start = start || 0;
+    end = end || arr.length - 1;
+
+    var i = start;
+    var j = end;
+
+    while (i < j) {
+        while (arr[i] <= arr[j] && i < j) {
+            j--;
+        }
+
+        // 找出比arr[i]小的值
+        // 两个数交换位置
+        if (i < j) {
+
+            var temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+
+        }
+
+        while (arr[i] < arr[j] && i < j) {
+            i++;
+        }
+
+        // 找出比arr[j]大的值
+        // 交换位置
+        if (i < j) {
+
+            var temp = arr[j];
+            arr[j] = arr[i];
+            arr[i] = temp;
+
+        }
+    }
+
+    if (i - start > 1) {
+        quickSort(arr, 0, i - 1);
+    }
+
+    if (end - j > 1) {
+        quickSort(arr, j + 1, end);
+    }
+}
+</pre>
+    </div>
+</section>
+
+<script src="asset/code.js"></script>
+<script type="text/javascript">
+function quickSort(arr, start, end) {
+    if (arr == null || arr.length == 0) {
+        return null;
+    }
+
+    start = start || 0;
+    end = end || arr.length - 1;
+
+    var i = start;
+    var j = end;
+
+    while (i < j) {
+        while (arr[i] <= arr[j] && i < j) {
+            j--;
+        }
+
+        // 找出比arr[i]小的值
+        // 两个数交换位置
+        if (i < j) {
+            // msg('i: ' + arr[i] + ' ' + arr[j]);
+
+            var temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+
+            // record every sort
+            count(arr.join(' '));
+        }
+
+        while (arr[i] < arr[j] && i < j) {
+            i++;
+        }
+
+        // 找出比arr[j]大的值
+        // 交换位置
+        if (i < j) {
+            // msg('j: ' + arr[i] + ' ' + arr[j]);
+
+            var temp = arr[j];
+            arr[j] = arr[i];
+            arr[i] = temp;
+
+            // record every sort
+            count(arr.join(' '));
+        }
+    }
+
+    if (i - start > 1) {
+        quickSort(arr, 0, i - 1);
+    }
+
+    if (end - j > 1) {
+        quickSort(arr, j + 1, end);
+    }
+}
+
+
+var computeCount = 0;
+
+function count(str) {
+    computeCount ++;
+
+    $('#process').append(
+        '<p><em>count ' + computeCount + ' :</em> '
+        + str + '</p>'
+    );
+}
+
+function msg(num) {
+    $('#process').append(num + '<br>');
+}
+
+$(function () {
+
+    var textarea = $('#rand-nums');
+    var divResult = $('#final');
+
+    function getRandNumber(size) {
+        var arr = [];
+
+        for ( var i = 0; i < size; i++ ) {
+            arr[i] = Math.ceil( Math.random() * 10000 );
+        }
+
+        return arr;
+    }
+
+    function genNums() {
+        var nums = +$('#size').val() || 100;
+
+        textarea.val(getRandNumber(nums).join(' '));
+    }
+
+
+    function conclude() {
+        var strArr = textarea.val().split(' ');
+
+        var numArr = [];
+        for (var i = 0, len = strArr.length; i < len; i++) {
+            numArr[i] = +strArr[i];
+        }
+
+        $('#process').html('');
+
+        var start = new Date();
+
+        quickSort(numArr);
+
+        var result = numArr;
+
+        var time = (new Date()) - start;
+
+        divResult.html(
+            '<p>' + result.join(' ') + '</p>'
+            + '<p>运行时间： ' + time +' ms</p>'
+        );
+    }
+
+    genNums();
+
+    $('#gen-button').click(function () {
+        genNums();
+    });
+
+    $('#begin').click(function () {
+        computeCount = 0;
+        conclude();
+    });
+});
+</script>
+</body>
+</html>
