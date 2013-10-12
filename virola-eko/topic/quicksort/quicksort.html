@@ -3,12 +3,29 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>quicksort快排测试</title>
-<link rel="stylesheet" href="asset/code.css" />
-<link rel="stylesheet" href="asset/snippet/jquery.snippet.min.css">
+<link rel="stylesheet" href="../asset/snippet/jquery.snippet.min.css">
+<link rel="stylesheet" href="../asset/base.css" />
+<style type="text/css">
+#process {
+    font-size: 12px;
+    max-height: 300px;
+    overflow: auto;
+    width: 100%;
+}
+#process p {
+    font-size: 12px;
+    margin: .5em 0;
+    color: #3fadef;
+}
+#process p em {
+    font-weight: bold;
+    color: #666;
+}
+#final {
+    padding: 0 1em;
+}
+</style>
 
-<script src="asset/jquery/jquery.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
-<script src="asset/snippet/jquery.snippet.min.js"></script>
 </head>
 <body>
 <section class="example">
@@ -87,7 +104,11 @@ function quickSort(arr, start, end) {
     </div>
 </section>
 
-<script src="asset/code.js"></script>
+<script src="../asset/jquery/jquery.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+<script src="../asset/snippet/jquery.snippet.min.js"></script>
+<script src="../asset/code.js"></script>
+
 <script type="text/javascript">
 function quickSort(arr, start, end) {
     if (arr == null || arr.length == 0) {
