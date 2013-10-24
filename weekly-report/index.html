@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>周报汇总平台</title>
+<link rel="stylesheet" href="./dep/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="./dep/bootstrap/dist/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" href="./src/less/index.css" />
+</head>
+<body>
+
+<header class="navbar navbar-weekly">
+    <section class="container">
+        <h1 class="navbar-header">
+            <a class="navbar-brand" href="#">周报汇总平台</a>
+        </h1>
+        <div class="nav-welcome">
+            <h3 class="nav-text">今天是 <span id="today-date"></span></h3>
+        </div>
+    </section>
+</header>
+
+<section class="container">
+
+    <div id="main" class="text-info">
+        <div class="main-tab-wrap">
+            <ul id="main-tab" class="nav nav-tabs main-tab">
+                <li class="active"><a href="#create-form" data-toggle="tab">提交</a></li>
+                <li><a href="#list" data-toggle="tab">查看</a></li>
+            </ul>
+
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="create-form">
+                    <div class="main-button-line">
+                        <button id="btn-create-project" class="btn btn-primary">新建一个项目</button>
+                        <button id="btn-import-project" class="btn btn-default">导入项目</button>
+                    </div>
+                    
+                    <div id="form-area"></div>
+                    <!-- 提交表单part end -->
+                </div>
+
+                <!-- 周报列表 -->
+                <div class="tab-pane" id="list">
+
+                </div>
+            </div>
+
+        </div>        
+        
+        
+    </div>
+
+    <footer><div class="container">&copy;2013</div></footer>
+</section>
+
+<script id="tpl-project" type="text/template">
+<section class="project">
+    <form class="project-form" onsubmit="return false;">
+    <div class="row">
+        <div class="project-name col-md-3" data-key="name"><input data-toggle="tooltip" title="项目名称" class="form-control" placeholder="项目名称" /></div>
+        <div class="col-md-2"><input data-toggle="tooltip" title="开始时间" class="form-control" placeholder="开始时间" /></div>
+        <div class="col-md-2"><input title="结束时间" placeholder="结束时间" class="form-control"></div>
+        <div class="col-md-2"><input title="项目当前进度" placeholder="当前进度" class="form-control"></div>
+        <div class="col-md-2">
+        <button class="btn btn-success project-save">保存</button>
+        </div>
+    </div>
+    </form>
+    <div class="task-list"></div>
+
+</section>    
+</script>
+<script id="tpl-task" type="text/template">
+<div class="subrow row">
+    <div class="col-md-1">
+        <span class="btn btn-default">+</span>
+    </div>
+    <div class="col-md-2">
+        <label>任务</label>
+        <input type="text" class="form-control" name="task_name">
+    </div>
+    <div class="col-md-2">
+        <label>描述</label>
+        <textarea class="form-control" rows="3" name="task_desc"></textarea>
+    </div>
+    <div class="col-md-1">
+        <label for="">开始时间</label>
+        <input class="form-control" name="begindate" />
+    </div>
+    <div class="col-md-1">
+        <label for="">完成时间</label>
+        <input class="form-control" name="enddate" />
+    </div>
+    <div class="col-md-1">
+        <label for="">当前阶段</label>
+        <input class="form-control" name="task_period" />
+        <div class="dropdown">
+            <div class="btn btn-toggle-period" data-toggle="dropdown"><span>开发中</span>
+                <b class="caret"></b></div>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li><a>需求阶段</a></li>
+                <li><a>设计中</a></li>
+                <li><a>开发中</a></li>
+                <li><a>待测试</a></li>
+                <li><a>测试中</a></li>
+                <li><a>待上线</a></li>
+                <li><a>已上线</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-2">
+        <label for="">人力情况</label>
+        <input class="form-control" name="task_person" />
+    </div>
+
+    <div class="col-md-2">
+        <br>
+        <button type="button" class="btn btn-success">Save</button>
+        <button type="button" class="btn btn-default">Copy</button>
+    </div>
+</div>
+</script>
+
+<script src="./dep/jquery/jquery.min.js"></script>
+<script src="./dep/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+var TPLDATA = {
+    urlProjectSave: './src/testData/success.json'
+};    
+
+</script>
+<script src="./src/index.js"></script>
+</body>
+</html>
