@@ -180,7 +180,7 @@ $(function () {
 
     $('.btn-toggle-period').dropdown();
 
-    $('#main-tab').tab();
+    $('#main-tab a:last').tab('show');
 
     project.init();
 });

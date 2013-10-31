@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="./dep/bootstrap/dist/css/bootstrap.min.css" />
 <link rel="stylesheet" href="./dep/bootstrap/dist/css/bootstrap-theme.min.css" />
 <link rel="stylesheet" href="./src/less/index.css" />
+
+<script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/1-6-6/esl.js"></script>
 </head>
 <body>
 
@@ -43,7 +45,11 @@
 
                 <!-- 周报列表 -->
                 <div class="tab-pane" id="list">
-
+                
+                    <section>
+                        <h3>项目情况</h3>
+                        <div id="summary-group-project" class="chart"></div>
+                    </section>
                 </div>
             </div>
 
@@ -128,10 +134,31 @@
 <script src="./dep/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 var TPLDATA = {
-    urlProjectSave: './src/testData/success.json'
-};    
+    urlProjectSave: 'project/save',
+    urlGroupData: 'getdata/group'
+};  
+
+require.config({
+    baseUrl: 'src',
+    paths: {  },
+    packages: [ 
+        {
+            name: 'echarts',
+            location: '../dep/echarts/1.2.0/src',
+            main: 'echarts'
+        },
+    
+        {
+            name: 'zrender',
+            location: '../dep/zrender/1.0.3/src',
+            main: 'zrender'
+        }
+    ]
+}); 
 
 </script>
 <script src="./src/index.js"></script>
+<script src="./src/visualize.js"></script>
+
 </body>
 </html>
