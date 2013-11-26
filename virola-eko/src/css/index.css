@@ -10,6 +10,11 @@ body {
     text-shadow: 2px 2px 0 #64B1C6;
 }
 
+figure {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
 
 nav ul {
     font-size: 24px;
@@ -98,69 +103,77 @@ a:hover {
     text-transform: uppercase;
 }
 
-
-/** Heart Style **/
-.heart {
-    position: relative;
-    width: 100px;
-    height: 90px;
-    margin-top: 100px;
-}
-
-.heart:before,
-.heart:after {
-    position: absolute;
-    content: "";
-    left: 50px;
-    top: 0;
-    width: 50px;
-    height: 80px;
-    background: red;
-    -moz-border-radius:50px 50px 0 0;
-    border-radius:50px 50px 0 0;
-    -webkit-transform:rotate( -45deg );
-    -moz-transform:rotate( -45deg );
-    -ms-transform:rotate( -45deg );
-    -o-transform:rotate( -45deg );
-    transform:rotate( -45deg );
-
-    -webkit-transform-origin:0 100%;
-    -moz-transform-origin:0 100%;
-    -ms-transform-origin:0 100%;
-    -o-transform-origin:0 100%;
-    transform-origin:0 100%;
-}
-
-.heart:after {
-    left: 0;
-    -webkit-transform:rotate( 45deg );
-    -moz-transform:rotate( 45deg );
-    -ms-transform:rotate( 45deg );
-    -o-transform:rotate( 45deg );
-    transform:rotate( 45deg );
-
-    -webkit-transform-origin:100% 100%;
-    -moz-transform-origin:100% 100%;
-    -ms-transform-origin:100% 100%;
-    -o-transform-origin:100% 100%;
-    transform-origin:100% 100%;
-}
-
-#main .center-content {
+.center-content {
     margin: 20px auto;
     width: 300px;
     text-align: left;
 }
 
-#main article h1 {
+#main .center-content h1 {
     font-size: 24px;
 }
 
-#main article dt {
+#main .center-content dt {
     font-size: 14px;
     font-weight: bold;
 }
 
-#main article dd {
+#main .center-content dd {
     margin-bottom: 10px;
+}
+
+
+/*-----方块格子区域，当然是想象中的-----*/
+.things {
+    margin: 150px auto;
+    width: 800px;
+    text-align: left;
+}
+
+.things .box {
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    border: 5px dashed #DDD;
+    margin: 10px;
+}
+
+.things .box a:hover {
+    background-color: #6DF;
+    text-decoration: underline;
+}
+
+.things .box figure a {
+    display: block;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+.things .box img {
+    display: block;
+    width: 160px;
+}
+
+.things .box p {
+    color: gray;
+    padding: 10px 20px;
+}
+.things .box p a {
+    line-height: 25px;
+    padding: 10px;
+}
+
+.box-model {
+    display: -moz-box; /* Firefox */
+    display: -webkit-box; /* Safari and Chrome */
+    display: -ms-flexbox; /* Internet Explorer 10 */
+    display: box;
+}
+
+.box-model .box {
+    -moz-box-flex: 1.0; /* Firefox */
+    -webkit-box-flex: 1.0; /* Safari and Chrome */
+    -ms-flex: 1.0; /* Internet Explorer 10 */
+    box-flex: 1.0;
 }
