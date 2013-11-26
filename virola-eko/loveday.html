@@ -40,91 +40,97 @@ article, aside, footer, header, hgroup, nav, section {
 }
 
 .kr {
-    font-family:Kriston ITC,Consolas, Arial;
+    font-family: Kriston ITC,Consolas, Arial;
 }
 .qs {
-    font-family:QuillineScriptThin,Consolas, Arial;
+    font-family: QuillineScriptThin,Consolas, Arial;
 }
 .f26 {
-    font-size:26px;
-    letter-spacing:1px;
+    font-size: 26px;
+    letter-spacing: 1px;
 }
 .f30 {
-    font-size:30px;
-    letter-spacing:1px;
+    font-size: 30px;
+    letter-spacing: 1px;
 }
 .f36 {
-    font-size:36px;
-    letter-spacing:1px;
+    font-size: 36px;
+    letter-spacing: 1px;
 }
 .f34 {
-    font-size:34px;
+    font-size: 34px;
 }
 
 nav {
-    float:left;
-    margin:5px 0 0 20px;
+    float: left;
+    margin: 5px 0 0 20px;
+    position: relative;
+    z-index: 5;
+}
+
+nav a, nav img {
+    display: block;
 }
 
 hgroup {
-    position:absolute;
-    width:350px;
-    right:0;
-    bottom:10px;
+    position: absolute;
+    width: 350px;
+    right: 0;
+    bottom: 10px;
 }
 h1, h2, h3 {
-	text-align:center;
-	margin:20px 20px 0 0;
+	text-align: center;
+	margin: 20px 20px 0 0;
 }
 h1 {
-    height:40px;
-    line-height:40px;
-    margin-top:10px;
-    font-weight:bold;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    font-weight: bold;
 }
 h2, h3 {
-    height:30px;
-    line-height:30px;
-    margin-top:10px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
 }
 
 h2 {
-    color:#bbb
+    color: #bbb
 }
 h3 {
-    color:#f36;
+    color: #f36;
 }
 
 section {
-    height:100%;
+    height: 100%;
     width: 100%;
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
     text-align: center;
     position: absolute;
 }
 
 footer {
-    width:100%;
-    height:15px;
-    line-height:15px;
-    position:absolute;
-    bottom:0;
-    text-align:center;
-    color:#fff;
-    font-weight:bold;
-    text-shadow:0 0 0 none;
+    width: 100%;
+    height: 15px;
+    line-height: 15px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 0 none;
 }
 
 .pic-box {
-    height:90px;
-    width:90px;
-    padding:3px;
-    margin:3px;
-    background:#fff;
-    border:1px solid #FF7777;
-    position:absolute;
-    z-index:10;
+    height: 90px;
+    width: 90px;
+    padding: 3px;
+    margin: 3px;
+    background: #fff;
+    border: 1px solid #FF7777;
+    position: absolute;
+    z-index: 10;
 
     -moz-transition: -moz-transform 1s; /* Firefox 4 */
     -webkit-transition: -webkit-transform 1s; /* Safari and Chrome */
@@ -157,7 +163,7 @@ footer {
 </style>
 </head>
 <body id="Wrap">
-    <nav><img src="asset/img/love/logo.png" alt="Virola Love Eko!" /></nav>
+    <nav><a href="http://www.virola-eko.com/"><img src="asset/img/love/logo.png" alt="Virola Love Eko!" /></a></nav>
     <hgroup>
         <h1 class="f30">Happy our </h1>
         <h1 class="f30">Love Anniversary !</h1>

@@ -146,7 +146,7 @@ a:hover {
     transform-origin:100% 100%;
 }
 
-#main article {
+#main .center-content {
     margin: 20px auto;
     width: 300px;
     text-align: left;
