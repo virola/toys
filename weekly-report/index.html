@@ -139,26 +139,28 @@ var TPLDATA = {
 };  
 
 require.config({
-    baseUrl: 'src',
-    paths: {  },
-    packages: [ 
+    'baseUrl': 'src',
+    'paths': {},
+    'packages': [
         {
-            name: 'echarts',
-            location: '../dep/echarts/1.2.0/src',
-            main: 'echarts'
+            'name': 'zrender',
+            'location': '../dep/zrender/1.0.3/src',
+            'main': 'zrender'
         },
-    
         {
-            name: 'zrender',
-            location: '../dep/zrender/1.0.3/src',
-            main: 'zrender'
+            'name': 'echarts',
+            'location': '../dep/echarts/1.2.0/src',
+            'main': 'echarts'
         }
     ]
 }); 
 
+require(['main'], function(main) {
+    main.init();
+});
+
 </script>
 <script src="./src/index.js"></script>
-<script src="./src/visualize.js"></script>
 
 </body>
 </html>
