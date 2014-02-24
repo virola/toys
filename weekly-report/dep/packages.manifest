@@ -1,0 +1,16 @@
+{
+    "zrender": {
+        "1.0.3": {
+            "name": "zrender",
+            "version": "1.0.3",
+            "main": "zrender"
+        }
+    },
+    "echarts": {
+        "1.2.0": {
+            "name": "echarts",
+            "version": "1.2.0",
+            "main": "echarts"
+        }
+    }
+}

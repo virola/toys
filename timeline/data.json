@@ -1,0 +1,165 @@
+
+{
+    "timeline":
+    {
+        "headline": "旅游知心",
+        "type": "default",
+		"startDate": "2013,2,24",
+		"text": "<i>2013.2 - 2013.9</i>",
+		"asset":
+        {
+            "media":"assets/img/logo_white_2x.png",
+            "credit":"",
+            "caption":""
+        },
+        "date": [
+            {
+                "startDate":"2013,2,25",
+                "endDate":"2013,3,21",
+                "headline":"知心酒店v0.9",
+                "text":"2013.3.21上线，<br>知心团队第一个上线的大搜模板项目",
+                "asset":
+                {
+                    "media":"assets/resource/hotel/hotel_v0.9.png",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2013,4,17",
+                "headline":"知心酒店v1.0",
+                "text": "",
+                "asset":
+                {
+                    "media":"assets/resource/hotel/hotel_v1.0.png",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate": "2013,4,24",
+                "headline": "知心机票v1.0",
+                "text": "",
+                "asset":
+                {
+                    "media":"assets/resource/flight/v1.0.png",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2013,4,27",
+                "headline":"知心酒店v1.1",
+                "text":"",
+                "asset":
+                {
+                    "media": "assets/resource/hotel/hotel_v1.1.png",
+                    "credit": "",
+                    "caption": ""
+                }
+            },
+            {
+                "startDate": "2013,5,24",
+                "headline": "知心度假v1.0",
+                "text": "上线后商业指标正向",
+                "asset":
+                {
+                    "media":"assets/resource/tour/v1.0.png",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2013,5,28",
+                "headline":"知心机票v1.1",
+                "text":"",
+                "asset":
+                {
+                    "media":"assets/resource/flight/v1.1.png",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2013,5,30",
+                "headline":"知心酒店v1.2",
+                "text": "",
+                "asset":
+                {
+                    "media":"assets/resource/hotel/hotel_v1.2.png",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2013,6,25",
+                "headline":"知心酒店v1.3",
+                "text":"",
+                "asset":
+                {
+                    "media":"assets/resource/hotel/hotel_v1.3.png",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate": "2013,6,18",
+                "headline": "知心机票v1.2 (没有找到效果图)",
+                "text":"开发人员：逯鹏宇",
+                "asset":
+                {
+                    "media": "",
+                    "credit": "",
+                    "caption": ""
+                }
+            },
+            {
+                "startDate": "2013,7,10",
+                "headline": "知心酒店v1.4",
+                "text": "知心酒店最后一个版本",
+                "asset":
+                {
+                    "media":"assets/resource/hotel/hotel_v1.4.png",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate": "2013,7,15",
+                "endDate": "2013,8,22",
+                "headline": "知心度假投放系统",
+                "text": "旅游行业第一个商业变现实验上线，完成开发<i>8月10日</i>，正式上线时间<i>8月22日</i>",
+                "asset":
+                {
+                    "media":"assets/resource/biz/tour.png",
+                    "credit":"开发人员：朱雨薇、逯鹏宇、裴龙辉、邹淼江",
+                    "caption":""
+                }
+            },
+            {
+                "startDate": "2013,8,22",
+                "endDate": "2013,8,30",
+                "headline": "知心度假最终版上线",
+                "text": "度假中间页重新设计UI",
+                "asset":
+                {
+                    "media":"assets/resource/tour/last.png",
+                    "credit":"开发人员：逯鹏宇、朱雨薇",
+                    "caption":""
+                }
+            },
+            {
+                "startDate": "2013,9,4",
+                "endDate": "2013,9,26",
+                "headline": "知心度假目的地指南系统",
+                "text": "完善知心度假中间页而开发的配套知识库系统",
+                "asset":
+                {
+                    "media":"assets/resource/tour/dest.png",
+                    "credit":"开发人员：朱雨薇、逯鹏宇、裴龙辉、邹淼江",
+                    "caption":""
+                }
+            }
+        ]
+    }
+}
