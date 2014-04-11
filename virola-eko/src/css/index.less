@@ -1,0 +1,84 @@
+/** 
+ * index.css
+ */
+@import 'base/mixin';
+@import 'layout';
+@import 'font';
+
+.center-content {
+    margin: 20px auto;
+    width: 300px;
+    text-align: left;
+}
+
+#main .center-content h1 {
+    font-size: 24px;
+}
+
+#main .center-content dt {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#main .center-content dd {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+
+/*-----方块格子区域，当然是想象中的-----*/
+.things {
+    margin: 150px auto;
+    width: 800px;
+    text-align: left;
+
+    .box {
+        font-size: 20px;
+        border-radius: 20px;
+        padding: 20px;
+        border: 5px dashed #DDD;
+        margin: 10px;
+
+        a:hover {
+            background-color: #6DF;
+            text-decoration: underline;
+        }
+
+        figure a {
+            display: block;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        img {
+            display: block;
+            width: 160px;
+        }
+
+        p {
+            color: gray;
+            padding: 10px 20px;
+
+            a {
+                line-height: 25px;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+.box-model {
+    display: -moz-box; /* Firefox */
+    display: -webkit-box; /* Safari and Chrome */
+    display: -ms-flexbox; /* Internet Explorer 10 */
+    display: box;
+
+    .box {
+        -moz-box-flex: 1.0; /* Firefox */
+        -webkit-box-flex: 1.0; /* Safari and Chrome */
+        -ms-flex: 1.0; /* Internet Explorer 10 */
+        box-flex: 1.0;
+    }
+}
+
+@import 'retina';

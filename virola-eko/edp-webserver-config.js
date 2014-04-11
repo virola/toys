@@ -1,4 +1,4 @@
-exports.port = 88;
+exports.port = 8848;
 exports.directoryIndexes = true;
 exports.documentRoot = __dirname;
 exports.getLocations = function () {

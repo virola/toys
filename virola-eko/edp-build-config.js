@@ -16,7 +16,7 @@ exports.getProcessors = function () {
             configFile: 'module.conf',
             entryExtnames: moduleEntries
         } ), 
-        new JsCompressor(), 
+        // new JsCompressor(), 
         new PathMapper( {
             replacements: [
                 { type: 'html', tag: 'link', attribute: 'href', extnames: pageEntries },
@@ -34,6 +34,7 @@ exports.exclude = [
     '/tool',
     '/doc',
     '/test',
+    '/asset',
     '/module.conf',
     '/dep/packages.manifest',
     '/dep/*/*/test',
