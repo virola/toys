@@ -1,9 +1,9 @@
 关于开发模式的探讨
 =====
 
-## git flow 快速协同开发
+git flow 快速协同开发
 
-### 安装
+## 安装
     
     git clone --recursive git://github.com/nvie/gitflow.git
     cd gitflow
@@ -13,7 +13,7 @@
     
     make install
         
-### 配置git仓库
+## 配置git仓库
     
 在本代码仓库目录下执行：
 
@@ -35,9 +35,9 @@
 
 使用默认的即可。
 
-### 如何使用？
+## 如何使用？
 
-1. 开发新功能
+### 开发新功能
 
 开发新卡片时：
 
@@ -68,8 +68,7 @@ tag已经打上了，那么就推到主干(以及develop)上线吧。
 以上。完成~
 
 
-
-2. BUG临时修复
+### BUG临时修复
 
 新建一个hotfix分支:
 
