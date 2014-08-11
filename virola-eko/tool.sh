@@ -10,6 +10,6 @@ fi
 
 if ["$cmd" == "build"]; then
     edp build -f
-    cp index.html index.bak.html
-    cp output/index.html index.html
+    # cp index.html index.bak.html
+    # cp output/index.html index.html
 fi 
